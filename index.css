@@ -696,7 +696,6 @@ footer {
     
     .nav-links.active {
         right: 0;
-        margin:0;
     }
     
     .hamburger.active .line:nth-child(1) {
