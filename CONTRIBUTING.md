@@ -5,15 +5,45 @@ Your help makes this project better for everyone. Here’s how to get started:
 
 ## 🛠️ How to Contribute
 
-1. **Fork the Repository**
-2. **Create a Branch**
-3. **Commit and Push**
+1 **Fork this Repository**
 
+2 **Clone your fork of this repo**
+
+```bash
+
+git clone https://github.com/<yourgithubusername>/protofile.git
+
+```
+
+3 **Create a new Branch with appropriate name**
+
+```bash
+cd /path/to/cloned-repo/
+git checkout -b your-branch-name
+```
+
+4 **Install Dependencies using npm**
+
+`Be ensure that you have installed node and npm on your system`
+
+```bash
+npm install
+npm run dev
+```
+
+5 **Make your changes & commit them**
+
+```bash
 git commit -m "feat: add amazing feature"
+```
 
-git push origin feature/amazing-feature
+6 **Push your changes to remote branch**
 
-Open a Pull Request
+```bash
+git push origin your-branch-name
+```
+
+7 **Open pull request**
 
 ## 🧪 Suggestions for Contributions
 
