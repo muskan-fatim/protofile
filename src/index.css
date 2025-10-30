@@ -42,6 +42,19 @@
         background-color 0.3s ease,
         color 0.3s ease;
 }
+*::-webkit-scrollbar {
+    display: none;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    display: block;
+    width: 0.25rem;
+    background-color: black;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--primary-light);
+    border-radius: 0.15rem;
+    cursor: pointer;
+}
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -229,6 +242,7 @@ nav {
 .hamburger {
     display: none;
     cursor: pointer;
+    z-index: 110;
 }
 
 .hamburger .line {
@@ -346,6 +360,7 @@ nav {
     font-size: 1.1rem;
     transition: var(--transition);
     box-shadow: var(--shadow);
+    margin: 0.5rem;
 }
 
 .cta-button:hover {
@@ -576,6 +591,9 @@ section {
     transition: var(--transition);
     background-color: var(--white);
     color: var(--text-color);
+}
+textarea {
+    resize: none;
 }
 
 .form-group input:focus,

@@ -38,10 +38,32 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
 
+    // outside click sidebar toggler
+    function toggleSidebarOnCLickOutside(evt) {
+        if (
+            evt.target !== navLinks &&
+            evt.target !== hamburger &&
+            !navLinks.contains(evt.target) &&
+            !hamburger.contains(evt.target)
+        ) {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+            document.removeEventListener("click", toggleSidebarOnCLickOutside);
+        }
+    }
+
     if (hamburger) {
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
             navLinks.classList.toggle("active");
+
+            // add event listener for click outside when sidebar is active
+            if (
+                hamburger.classList.contains("active") &&
+                navLinks.classList.contains("active")
+            ) {
+                document.addEventListener("click", toggleSidebarOnCLickOutside);
+            }
         });
     }
 
